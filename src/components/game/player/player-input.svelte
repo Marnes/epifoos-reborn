@@ -38,15 +38,5 @@ function onSelect(player: Player) {
 		</div>
 	</div>
 </div>
-
-<style lang="scss">
-.player {
-	opacity: 1;
-	transition: opacity 0.5s;
-}
-
-.selected {
-	opacity: 0.4;
-	transition: opacity 0.5s;
-}
-</style>
+	{/if}
+</div>
