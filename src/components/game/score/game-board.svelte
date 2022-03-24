@@ -2,10 +2,13 @@
 import ScoreSelector from '$components/game/score/score-input.svelte';
 import { MatchSettings } from '$models/constants';
 import type { Game } from '$models/game';
+import type { Player } from '$models/player';
 import PlayerInput from '../player/player-input.svelte';
 
 export let game: Game;
 export let maxScore: number = MatchSettings.MAX_SCORE;
+export let winner: Player = null;
+export let loser: Player = null;
 
 function updateScore(game: Game, left: boolean, first: boolean) {
 	return ({ detail }) => {
@@ -35,8 +38,18 @@ function setScore(game: Game, score: number, left: boolean, first: boolean) {
 	<!-- <div class="text-center font-bold mb-5 text-xl"><span>Game {gameNumber}</span></div> -->
 	<div class="flex items-center justify-center">
 		<div class="flex flex-col gap-2">
-			<PlayerInput player={game.leftPlayer1} class="w-52"/>
-			<PlayerInput player={game.leftPlayer2} class="w-52"/>
+			<PlayerInput
+				player="{game.leftPlayer1}"
+				class="w-52"
+				winner="{game.leftPlayer1 === winner}"
+				loser="{game.leftPlayer1 === loser}"
+			/>
+			<PlayerInput
+				player="{game.leftPlayer2}"
+				class="w-52"
+				winner="{game.leftPlayer2 === winner}"
+				loser="{game.leftPlayer2 === loser}"
+			/>
 		</div>
 		<div class="flex flex-col gap-2">
 			<ScoreSelector
@@ -66,8 +79,18 @@ function setScore(game: Game, score: number, left: boolean, first: boolean) {
 			/>
 		</div>
 		<div class="flex flex-col gap-2">
-			<PlayerInput player={game.rightPlayer1} class="w-52"/>
-			<PlayerInput player={game.rightPlayer2} class="w-52"/>
+			<PlayerInput
+				player="{game.rightPlayer1}"
+				class="w-52"
+				winner="{game.rightPlayer1 === winner}"
+				loser="{game.rightPlayer1 === loser}"
+			/>
+			<PlayerInput
+				player="{game.rightPlayer2}"
+				class="w-52"
+				winner="{game.rightPlayer2 === winner}"
+				loser="{game.rightPlayer2 === loser}"
+			/>
 		</div>
 	</div>
 </div>

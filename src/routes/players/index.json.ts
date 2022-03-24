@@ -23,7 +23,8 @@ export async function get(): Promise<{}> {
 		createPlayer('Channel'),
 		createPlayer('Chris'),
 		createPlayer('IT'),
-		createPlayer('Freddie')
+		createPlayer('Freddie'),
+		createPlayer('Jodan'),
 	];
 
 	return {

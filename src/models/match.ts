@@ -21,7 +21,7 @@ export class Match {
 	}
 
     canSubmit(): boolean {
-        return this.games.length > 0 && this.players.length > 0 && this.games.every(game => game.canSubmit())
+        return this.games.length > 0 && this.players.length > 0 && this.games.every(game => game.isComplete())
     }
 }
 

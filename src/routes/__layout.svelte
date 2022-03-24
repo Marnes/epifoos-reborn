@@ -15,9 +15,10 @@ async function logout() {
 }
 </script>
 
-<Topbar on:logout="{logout}" on:showSession="{() => (showSessionModal = true)}" />
 
-<div class="from-primary via-base-100 to-secondary-100 bg-gradient-to-br">
+<div class="from-secondary via-base to-secondary-300 bg-gradient-to-br text-primary-content">
+	<Topbar on:logout="{logout}" on:showSession="{() => (showSessionModal = true)}" />
+		
 	<div class="flex flex-col items-center h-screen">
 		<div class="container">
 			<slot />

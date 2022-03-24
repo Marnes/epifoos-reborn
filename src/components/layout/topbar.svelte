@@ -8,9 +8,9 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 const dispatch = createEventDispatcher();
 </script>
 
-<div class="navbar bg-base-100">
+<div class="navbar bg-transparent">
 	<div class="flex-1">
-		<a href="/" class="btn btn-ghost normal-case text-xl">EPI-Foos Reborn</a>
+		<a href="/" class="btn btn-ghost normal-case text-2xl">EPI-Foos Reborn</a>
 	</div>
 	<div class="flex-none gap-2">
 		<div class="dropdown dropdown-end">
@@ -25,7 +25,7 @@ const dispatch = createEventDispatcher();
 			</div>
 			<ul
 				tabindex="0"
-				class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+				class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52 text-base-content"
 			>
 				{#if $session.user}
 					<li><button on:click="{() => dispatch('logout')}">Logout</button></li>

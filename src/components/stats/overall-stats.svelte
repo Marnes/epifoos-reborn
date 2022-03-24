@@ -8,11 +8,11 @@ export let players: Player[];
 $: sortedPlayers = _.sortBy(players, 'rank');
 
 function getCellClass(player: Player) {
- return $session.user?.username === player.name ? 'bg-accent' : ''
+	return $session.user?.username === player.name ? 'bg-accent' : '';
 }
 </script>
 
-<table class="table table-compact w-full rounded-none text-center">
+<table class="table table-compact w-full text-center text-base-content">
 	<thead>
 		<tr>
 			<th></th>
@@ -45,4 +45,13 @@ function getCellClass(player: Player) {
 </table>
 
 <style lang="scss">
+.table :where(thead, tfoot) :where(th, td):first-child {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.table :where(thead, tfoot) :where(th, td):last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
 </style>

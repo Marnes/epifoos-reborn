@@ -9,7 +9,7 @@ $: hasHeading = () => heading || $$slots.heading;
 	<div class="modal-box relative">
 		<label
 			for="my-modal-3"
-			class="btn btn-sm btn-circle absolute right-2 top-2 bg-primary border-slate-500"
+			class="btn btn-sm btn-circle absolute right-2 top-2 bg-secondary hover:bg-secondary-focus border-secondary-focus"
 			on:click="{() => (show = false)}">✕</label
 		>
 		<slot name="heading">

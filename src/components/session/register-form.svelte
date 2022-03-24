@@ -89,7 +89,7 @@ async function register() {
 	<div>
 		<button
 			type="submit"
-			class="w-full flex justify-center bg-secondary p-3 rounded-full font-semibold shadow-lg cursor-pointer transition ease-in duration-200 hover:bg-accent"
+			class="w-full text-white flex justify-center bg-primary p-3 rounded-full font-semibold shadow-lg cursor-pointer transition ease-in duration-200 hover:bg-primary-focus"
 		>
 			Register
 		</button>

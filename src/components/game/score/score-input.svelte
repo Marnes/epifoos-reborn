@@ -27,7 +27,13 @@ function getScoreArray() {
 
 <div class="stats shadow h-16 rounded-none">
 	{#each scoreArray as i}
-		<div class="stat stat-{i} {i === value ? 'selected' : ''}" on:click="{onSelect(i)}">
+		<div
+			class="stat stat-{i}"
+			class:shadow-2xl="{i === value}"
+			class:shadow-black="{i === value}"
+			class:selected="{i === value}"
+			on:click="{onSelect(i)}"
+		>
 			<div class="stat-value">{i}</div>
 		</div>
 	{/each}
